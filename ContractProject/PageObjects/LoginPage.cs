@@ -53,9 +53,27 @@ namespace ContractProject.PageObjects
             Signin.Click();
         }
 
-        /* login verification for invalid login
-        // option or methhod 1 
-        [FindsBy(How =How.XPath, Using = "//*[@id='login - form']/div[1]")]
+         // valid login 
+        [FindsBy(How = How.LinkText, Using = "Logout")]
+        private IWebElement LogOut { get; set; }
+
+        public void ClickLogOut()
+        {
+            LogOut.Click();
+        }
+
+        // invalid password
+        [FindsBy(How = How.CssSelector, Using = "#password")]
+        private IWebElement InvalidPassword { get; set; }
+
+        public void EnterInvalidPassword()
+        {
+            InvalidPassword.SendKeys("WrongPassword");
+        }
+
+        // invalid login confirmation
+         
+        [FindsBy(How =How.CssSelector, Using = "#login-form > div.alert.alert-danger")]
         private IWebElement loginErrogMsg { get; set; }
 
         // private IWebElement ConfirmLogin { get; set; }
@@ -63,15 +81,33 @@ namespace ContractProject.PageObjects
         public bool IsloginErrorMsgDisplayed()
         {
             return loginErrogMsg.Displayed;
-        }  */
+        }  
 
-        // valid login 
-        [FindsBy(How = How.LinkText, Using = "Logout")]
-        private IWebElement LogOut { get; set; }
+        // invalid email address
+        [FindsBy(How = How.CssSelector, Using = "#email")]
+        private IWebElement InvalidEmailAddress { get; set; }
 
-        public void ClickLogOut()
+        public void EnterInvalidEmailAddress(string inVemail)
         {
-            LogOut.Click();
+            InvalidEmailAddress.SendKeys(inVemail);
+        }
+
+        // blank email or no email address
+        [FindsBy(How = How.CssSelector, Using = "#email")]
+        private IWebElement NoEmailAddress { get; set; }
+
+        public void ClickonEmailAddress()
+        {
+            NoEmailAddress.Click();
+        }
+
+        // blank password or no password
+        [FindsBy(How = How.CssSelector, Using = "#password")]
+        private IWebElement NoPassword { get; set; }
+
+        public void ClickonPassword()
+        {
+            NoPassword.Click();
         }
     }
 }

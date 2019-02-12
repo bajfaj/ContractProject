@@ -57,5 +57,41 @@ namespace ContractProject.StepsDefinations
         {
             thelogin.ClickLogOut();
         }
+
+        // invalid password
+        [When(@"I enter an invalid password")]
+        public void WhenIEnterAnInvalidPassword()
+        {
+            thelogin.EnterInvalidPassword();
+        }
+
+        // invalid login confirmation
+
+        [Then(@"user should be unable to login")]
+        public void ThenUserShouldBeUnableToLogin()
+        {
+            thelogin.IsloginErrorMsgDisplayed();
+        }
+
+        // invalid email address passing in parameters
+        [When(@"I enter an invalid email ""(.*)""")]
+        public void WhenIEnterAnInvalidEmail(string inVemail)
+        {
+            thelogin.EnterInvalidEmailAddress(inVemail);
+        }
+
+        // empty or blank email address
+        [When(@"I enter no email address")]
+        public void WhenIEnterNoEmailAddress()
+        {
+            thelogin.ClickonEmailAddress();
+        }
+
+        // empty password or blank password
+        [When(@"I enter no password")]
+        public void WhenIEnterNoPassword()
+        {
+            thelogin.ClickonPassword();
+        }
     }
 }

@@ -97,139 +97,119 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Invalid Login - valid username and invalid password")]
-        public virtual void InvalidLogin_ValidUsernameAndInvalidPassword()
+        [NUnit.Framework.DescriptionAttribute("Invalid Login 1 - valid username and invalid password")]
+        public virtual void InvalidLogin1_ValidUsernameAndInvalidPassword()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Invalid Login - valid username and invalid password", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Invalid Login 1 - valid username and invalid password", null, ((string[])(null)));
+#line 15
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
 #line 16
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
+ testRunner.Given("I navigate to the site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 17
-    testRunner.Given("i navigate to the site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.When("I click on the login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 18
- testRunner.And("I enter a valid username and invalid password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I enter my email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 19
- testRunner.When("I click ok", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I enter an invalid password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 20
+ testRunner.And("I click on the signin button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 21
  testRunner.Then("user should be unable to login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Invalid Login - invalid username and valid password")]
-        public virtual void InvalidLogin_InvalidUsernameAndValidPassword()
+        [NUnit.Framework.DescriptionAttribute("Invalid Login 2 - invalid username and valid password")]
+        public virtual void InvalidLogin2_InvalidUsernameAndValidPassword()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Invalid Login - invalid username and valid password", null, ((string[])(null)));
-#line 22
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 23
-    testRunner.Given("i navigate to the site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 24
- testRunner.And("I enter an invalid username and valid password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Invalid Login 2 - invalid username and valid password", null, ((string[])(null)));
 #line 25
- testRunner.When("I click ok", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 26
- testRunner.Then("user should be unable to login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Invalid Login - invalid username and invalid password")]
-        public virtual void InvalidLogin_InvalidUsernameAndInvalidPassword()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Invalid Login - invalid username and invalid password", null, ((string[])(null)));
-#line 28
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
+#line 26
+    testRunner.Given("I navigate to the site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 27
+ testRunner.When("I click on the login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 28
+ testRunner.And("I enter an invalid email \"john@people.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 29
-    testRunner.Given("i navigate to the site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.And("I enter my password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 30
- testRunner.And("I enter invalid username and invalid password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I click on the signin button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 31
- testRunner.When("I click ok", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 32
  testRunner.Then("user should be unable to login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Invalid Login - empty username and empty password")]
-        public virtual void InvalidLogin_EmptyUsernameAndEmptyPassword()
+        [NUnit.Framework.DescriptionAttribute("Invalid Login 3 - invalid username and invalid password")]
+        public virtual void InvalidLogin3_InvalidUsernameAndInvalidPassword()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Invalid Login - empty username and empty password", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Invalid Login 3 - invalid username and invalid password", null, ((string[])(null)));
 #line 34
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 35
-    testRunner.Given("i navigate to the site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I navigate to the site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 36
- testRunner.And("I enter no username and no password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I click on the login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 37
- testRunner.When("I click ok", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I enter an invalid email \"mikes@yahoo.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 38
- testRunner.Then("user should be unable to login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Invalid Login - empty username and valid password")]
-        public virtual void InvalidLogin_EmptyUsernameAndValidPassword()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Invalid Login - empty username and valid password", null, ((string[])(null)));
+ testRunner.And("I enter an invalid password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 39
+ testRunner.And("I click on the signin button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 40
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 41
-    testRunner.Given("i navigate to the site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Then("user should be unable to login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Invalid Login 4 - empty username and empty password")]
+        public virtual void InvalidLogin4_EmptyUsernameAndEmptyPassword()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Invalid Login 4 - empty username and empty password", null, ((string[])(null)));
 #line 42
- testRunner.And("I enter no username and valid password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
 #line 43
- testRunner.When("I click ok", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.Given("I navigate to the site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 44
- testRunner.Then("user should be unable to login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Invalid Login - empty username and invalid password")]
-        public virtual void InvalidLogin_EmptyUsernameAndInvalidPassword()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Invalid Login - empty username and invalid password", null, ((string[])(null)));
+ testRunner.When("I click on the login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 45
+ testRunner.And("I enter no email address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 46
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
+ testRunner.And("I enter no password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 47
-    testRunner.Given("i navigate to the site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.And("I click on the signin button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 48
- testRunner.And("I enter no username and invalid password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 49
- testRunner.When("I click ok", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 50
  testRunner.Then("user should be unable to login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Invalid Login - valid username and empty password")]
-        public virtual void InvalidLogin_ValidUsernameAndEmptyPassword()
+        [NUnit.Framework.DescriptionAttribute("Invalid Login 5 - empty username and valid password")]
+        public virtual void InvalidLogin5_EmptyUsernameAndValidPassword()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Invalid Login - valid username and empty password", null, ((string[])(null)));
-#line 52
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Invalid Login 5 - empty username and valid password", null, ((string[])(null)));
+#line 50
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
+#line 51
+    testRunner.Given("I navigate to the site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 52
+ testRunner.When("I click on the login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 53
-    testRunner.Given("i navigate to the site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.And("I enter no email address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 54
- testRunner.And("I enter a valid username and no password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I enter my password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 55
- testRunner.When("I click ok", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I click on the signin button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 56
  testRunner.Then("user should be unable to login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -237,20 +217,72 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Invalid Login - invalid username and empty password")]
-        public virtual void InvalidLogin_InvalidUsernameAndEmptyPassword()
+        [NUnit.Framework.DescriptionAttribute("Invalid Login 6 - empty username and invalid password")]
+        public virtual void InvalidLogin6_EmptyUsernameAndInvalidPassword()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Invalid Login - invalid username and empty password", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Invalid Login 6 - empty username and invalid password", null, ((string[])(null)));
 #line 58
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 59
-    testRunner.Given("i navigate to the site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I navigate to the site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 60
- testRunner.And("I enter a invalid username and no password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I click on the login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 61
- testRunner.When("I click ok", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I enter no email address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 62
+ testRunner.And("I enter an invalid password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 63
+ testRunner.And("I click on the signin button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 64
+ testRunner.Then("user should be unable to login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Invalid Login 7 - valid username and empty password")]
+        public virtual void InvalidLogin7_ValidUsernameAndEmptyPassword()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Invalid Login 7 - valid username and empty password", null, ((string[])(null)));
+#line 66
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 67
+ testRunner.Given("I navigate to the site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 68
+ testRunner.When("I click on the login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 69
+ testRunner.And("I enter my email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 70
+ testRunner.And("I enter no password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 71
+ testRunner.And("I click on the signin button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 72
+ testRunner.Then("user should be unable to login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Invalid Login 8 - invalid username and empty password")]
+        public virtual void InvalidLogin8_InvalidUsernameAndEmptyPassword()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Invalid Login 8 - invalid username and empty password", null, ((string[])(null)));
+#line 74
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 75
+    testRunner.Given("I navigate to the site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 76
+ testRunner.When("I click on the login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 77
+ testRunner.And("I enter an invalid email \"final@people.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 78
+ testRunner.And("I enter no password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 79
+ testRunner.And("I click on the signin button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 80
  testRunner.Then("user should be unable to login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
