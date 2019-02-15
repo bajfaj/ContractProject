@@ -47,36 +47,36 @@ namespace ContractProject.PageObjects
         [FindsBy(How = How.Id, Using = "email")]
         private IWebElement EmailAddress { get; set; }
 
-        public void EnterEmailAddress()
+        public void EnterEmailAddress(string email)
         {
-            EmailAddress.SendKeys("mjordan@yahoo.com");
+            EmailAddress.SendKeys(email);
         }
 
         // mobile number
         [FindsBy(How = How.CssSelector, Using = "#mobile")]
         private IWebElement MobileNumber { get; set; }
 
-        public void EnterMobileNumber()
+        public void EnterMobileNumber(string mobileNumber)
         {
-            MobileNumber.SendKeys("07987665434");
+            MobileNumber.SendKeys("079855");
         }
 
         // Password
         [FindsBy(How = How.Id, Using = "password")]
         private IWebElement Password { get; set; }
 
-        public void EnterPassword()
+        public void EnterPassword(string passwordText)
         {
-            Password.SendKeys("Abcde1");
+            Password.SendKeys(passwordText);
         }
 
         // Confirm Password
         [FindsBy(How = How.Id, Using = "confirm_password")]
         private IWebElement ConfirmPassword { get; set; }
 
-        public void EnterConfirmPassword()
+        public void EnterConfirmPassword(string confirmPasswordText)
         {
-            ConfirmPassword.SendKeys("abcde1");
+            ConfirmPassword.SendKeys(confirmPasswordText);
         }
 
         // Signup button
@@ -95,6 +95,66 @@ namespace ContractProject.PageObjects
         public void ClickSecureSignIn()
         {
             SecureSignIn.Click();
+        }
+
+        // second registration confirmation
+        [FindsBy(How = How.CssSelector, Using = "#login-form > div.alert.alert-success")]
+        private IWebElement SuccessMessage { get; set; }
+
+               public bool SuccessMessageIsDispayed()
+        {
+            try
+            {
+                return SuccessMessage.Displayed;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            return SuccessMessage.Displayed;
+        }
+
+        // password short message 
+        [FindsBy(How = How.CssSelector, Using = "#signup-form > div:nth-child(5) > label.error")]
+        private IWebElement passwordTooShortMsg { get; set; }
+
+        public string GetTextForPasswordTooShort()
+        {
+            // return passwordTooShortMsg.Text; (method 1)
+            // Another method below
+            string text = passwordTooShortMsg.Text;
+            return text;  
+        }
+
+        public bool PasswordTooShortMsgIsDisplayed()
+        {
+            try
+            {
+                return passwordTooShortMsg.Displayed;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+        // invalid email address message
+        [FindsBy(How = How.CssSelector, Using = "#signup-form > div:nth-child(3) > label.error")]
+        private IWebElement InvalidEmailMsg { get; set; }
+
+        public string GetTextForInvalidEmail()
+        {
+            /* string text = InvalidEmailMsg.Text;
+             return text; OR BELOW */
+            return InvalidEmailMsg.Text;
+        }
+
+        // MOBILE TOO SHORT
+        [FindsBy(How = How.CssSelector, Using = "#signup-form > div:nth-child(4) > label.error")]
+        private IWebElement MobileTooShortMsg { get; set; }
+
+        public string GetTextForMobileTooShort()
+        {
+            return MobileTooShortMsg.Text;
         }
     }
 }

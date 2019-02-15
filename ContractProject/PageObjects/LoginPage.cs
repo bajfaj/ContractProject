@@ -9,6 +9,12 @@ using System.Threading.Tasks;
 
 namespace ContractProject.PageObjects
 {
+    /* WorkFlow Process for PageObject and StepDefination
+        1. Inspect in Browser and decide on selector to use
+        2. In Pageobject find the element
+        3. Create a method for the action in PageObject
+        4. Call the element in StepDefination */
+
     class LoginPage
     {
         // navigate method

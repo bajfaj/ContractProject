@@ -97,6 +97,68 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I confirm password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 15
  testRunner.And("I click on signup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 17
+ testRunner.Then("Registration second confirmation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("InValid Registration")]
+        public virtual void InValidRegistration()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("InValid Registration", null, ((string[])(null)));
+#line 21
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 22
+ testRunner.Given("I navigate to the site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 23
+ testRunner.When("Click on the register link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 24
+ testRunner.And("I enter firstname", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 25
+ testRunner.And("I enter lastname", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 26
+ testRunner.And("I enter emailaddress", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 27
+ testRunner.And("I enter mobile number", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 28
+ testRunner.And("I enter password \"MyNewPassword\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 29
+ testRunner.And("I confirm password \"No\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 30
+ testRunner.And("I click on signup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 31
+ testRunner.Then("Registration second confirmation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Password Fields")]
+        public virtual void PasswordFields()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Password Fields", null, ((string[])(null)));
+#line 33
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 34
+    testRunner.Given("I navigate to the site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 35
+ testRunner.When("Click on the register link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 36
+ testRunner.And("I enter firstname", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 37
+ testRunner.And("I enter lastname", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 38
+ testRunner.And("I enter emailaddress", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 39
+ testRunner.And("I enter mobile number", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 40
+ testRunner.And("I enter password \"one\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 41
+ testRunner.Then("the password is too short error message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
