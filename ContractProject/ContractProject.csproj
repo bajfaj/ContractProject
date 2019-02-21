@@ -95,6 +95,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StepsDefinations\RegistrationSteps.cs" />
     <Compile Include="StepsDefinations\LoginSteps.cs" />
+    <Compile Include="TraditionalSeleniumWithoutSpecFlow\TraditionalSelenium.cs" />
+    <Compile Include="TraditionalSeleniumWithoutSpecFlow\ValidationOfForms.cs" />
     <Compile Include="Utilities\Hooks.cs" />
   </ItemGroup>
   <ItemGroup>
